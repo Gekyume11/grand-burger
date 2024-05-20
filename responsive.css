@@ -1,0 +1,63 @@
+@media(max-width: 992px){
+    section{
+        height: auto;
+    }
+    .burgers .normal{
+        transform: scale(1);
+    }
+    .sauce{
+        background-image: url(images/sauce.png);
+        background-position: 0%;
+        background-size: 50% 100%;
+    }
+    .letter p{
+        text-align: center;
+    }
+    .sunday{
+        height: 50dvh;
+    }
+}
+@media(max-width: 567px){
+    .cnt{
+        width: 100%;
+    }
+    header{
+        padding: 20px 0;
+    }
+    .logo{
+        width: 200px;
+    }
+    .main-img{
+        width: 350px;
+    }
+    .sauce{
+        background: none;
+    }
+    .sunday{
+        height: 40dvh;
+    }   
+}
+@media(max-width: 400px){
+    .main-img{
+        transform: translate(-50%, -50%);
+    }
+    .main-img, .burgers img{ 
+        width: 250px;
+    }
+    .email{
+        max-width: 150px;
+    }
+    .sunday{
+        height: 35dvh;
+    }
+}
+@media(max-width: 368px){
+    .logo{
+        width: 175px;
+    }
+}
+@media(max-width: 281px){
+    .logo{
+        width: 150px;
+    }
+}

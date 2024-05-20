@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+::-webkit-scrollbar{
+    background: rgba(0, 0, 0, 0.9);
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none !important;
+}
+li{
+    list-style: none;
+}
+ul{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.body.active{
+    overflow: hidden;
+}
+.body{
+    overflow-x: hidden !important;
+}
+.cnt{
+    max-width: 1400px;
+    width: 95%;
+    margin: 0 auto;
+}
+.active{
+    color: #FFBC06 !important;
+}
+.bg-set{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.showcase{
+    transition: .5s;
+    z-index: 2;
+}
+.showcase.active{
+    transform: translateX(-220px);
+    filter: brightness(0.7);
+}
+main, section{
+    height: 100dvh;
+    background-color: #1c2123;
+}
+main{
+    background-image: url(https://gekyume11.github.io/brgr/hero-bg.png);
+    position: relative;
+    z-index: 4;
+    background-attachment: fixed;
+}
+.main-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+.main-img img{
+    animation: floating 3s infinite ease-in-out;
+}
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}
+.main-img::before{
+    position: absolute;
+    top: -25%;
+    left: 0;
+    content: "TASTE THE DIFFERENCE";
+    color: #fff;
+    font-size: clamp(1.5625rem, 0.7813rem + 4.4643vw, 4.6875rem);
+    text-align: center;
+    font-weight: 900;
+    line-height: 1.1;
+    z-index: 3;
+}
+.top{
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+header{
+    padding: 30px 0;
+}
+.logo{
+    width: 250px;
+}
+header ul li{
+    margin-left: 2em;
+}
+header ul li a{
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    transition: .3s;
+    position: relative;
+}
+header ul li a:hover, .menu li a:hover{
+    color: #FFBC06;
+}
+header ul li a::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #FFBC06;
+    transition: .3s;
+}
+header ul li a:hover::after{
+    width: 100%;
+}
+.hamburger{
+    width: 35px;
+    height: 24px;
+    transition: .3s;
+    cursor: pointer;
+    z-index: 4;
+}
+.hamburger .top, .middle, .bottom{
+    top: 0;
+    left: 0;
+    height: 3px;
+    transition: .3s;
+}
+.hamburger .middle{
+    transform: translateY(10px);
+}
+.hamburger .bottom{
+    transform: translateY(20px);
+}
+.hamburger.active{
+    transform: rotate(90deg);
+}
+.hamburger.active .middle{
+    display: none !important;
+}
+.hamburger.active .top{
+    transform: rotate(45deg);
+    top: 10px;
+}
+.hamburger.active .bottom{
+    transform: rotate(-45deg);
+    top: 10px;
+}
+.menu{
+    right: 0;
+    top: 0;
+    height: 100dvh;
+    width: 220px;
+    z-index: 1;
+}
+.menu li a{
+    color: #111;
+    font-size: 20px;
+    transition: .3s;
+}
+.hero-text{
+    left: 0;
+    bottom: 0;
+}
+.hero-text .left p{
+    max-width: 420px;
+}
+.hero-text .right .h2{
+    line-height: 0px;
+}
+.hero-text .right .pacifico, .sauce .pacifico{
+    font-family: "Pacifico" !important;
+    font-size: 30px;
+}
+.burgers .title{
+    font-size: clamp(1.125rem, 1.0156rem + 0.625vw, 1.5625rem);
+    font-weight: 500;
+    border-color: #6c757d !important;
+    border-top: 3px dashed #6c757d;
+    border-bottom: 3px dashed #6c757d;
+}
+.burgers .name{
+    font-size: clamp(1.5rem, 1.375rem + 0.7143vw, 2rem);
+}
+.burgers .sub-text{
+    max-width: 300px;
+}
+.middle .title{
+    border-color: #FFBC06 !important;
+    font-size: 50px;
+    font-size: clamp(2rem, 1.7188rem + 1.6071vw, 3.125rem);
+}
+.burgers .normal{
+    transform: scale(0.8);
+}
+.menu-list .pizza{
+    background-image: url(https://gekyume11.github.io/brgr/pizza.png);
+}
+.menu-list h2{
+    font-weight: 550;
+    font-size: clamp(1.375rem, 1.0156rem + 2.0536vw, 2.8125rem);
+}
+.menu-list h1{
+    font-weight: 650;
+    font-size: clamp(1.875rem, 1.5625rem + 1.7857vw, 3.125rem);
+}
+.menu-list p{
+    font-weight: 400;
+}
+.menu-list a, .sauce a{
+    width: fit-content;
+    padding: 10px 30px;
+    transition: .3s all;
+}
+.menu-list a:hover, .sauce a:hover{
+    letter-spacing: 2px;
+}
+.menu-list a.cta, .letter a{
+    background: #dc9457;
+}
+.menu-list a.cta:hover, .letter a:hover{
+    background: #b36928;
+}
+.menu-list a.ctaa{
+    background: #333;
+}
+.menu-list a.ctaa:hover{
+    background: #000;
+}
+.menu-list .end{
+    background: #e7e7e7;
+}
+.sauce .sauce-bg{
+    background-image: url(https://gekyume11.github.io/brgr/sauce.png);
+    height: 100%;
+}
+.sauce span h2, .salad span h2{
+    font-weight: 500;
+}
+.sauce span .line, .salad span .line, .letter span .line{
+    height: 2px !important;
+}
+.sauce h1, .salad h1{
+    font-size: clamp(1.375rem, 0.9063rem + 2.6786vw, 3.25rem);
+    font-weight: 700;
+}
+.sauce h1 span, .salad h1 span{
+    font-size: clamp(1.75rem, 1.25rem + 2.8571vw, 3.75rem);
+}
+.sauce h1.pacifico, .salad h1.pacifico{
+    font-size: clamp(1.75rem, 1.25rem + 2.8571vw, 3.75rem);
+    color: #ef3d5b;
+}
+.sauce p.sub, .salad p.sub{
+    font-weight: 600;
+    font-size: 18px;
+}
+.salad p{
+    max-width: 420px;
+}
+.salad-bg{
+    background-image: url(https://gekyume11.github.io/brgr/salad.png);
+}
+.salad h1{
+    color: #57b957;
+}
+.letter{
+    background: #1c2123;
+}
+.letter span .line{
+    background: #dc9457;
+    flex: 1;
+}
+.letter span h2{
+    color: #dc9457;
+}
+.letter p{
+    text-align: end;
+}
+.email{
+    padding: 6px 12px;
+}
+.letter a{
+    transition: .3s;
+}
+.sunday{
+    background: url(https://gekyume11.github.io/brgr/sunday-bg.png) no-repeat, linear-gradient(236deg, rgba(210,60,85,1) 0%, rgba(209,59,85,1) 100%);
+    background-size: 100%;
+    background-position: bottom;
+}
+.sunday h1{
+    font-size: clamp(1.875rem, 0.4688rem + 8.0357vw, 7.5rem);
+    font-weight: 600;
+} 
+.sunday h1 span{
+    font-size: clamp(1.5rem, 1.0938rem + 2.3214vw, 3.125rem);
+}
+footer img{
+    width: 250px;
+    filter: invert(1);
+}
+footer p{
+    font-weight: 500;
+}
+footer p.phone{
+    font-weight: 600;
+}
+footer p.pacifico{
+    font-family: "Pacifico" !important;
+}  
